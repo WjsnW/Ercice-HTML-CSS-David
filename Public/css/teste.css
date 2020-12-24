@@ -1,0 +1,37 @@
+#exo4{
+    position: relative;
+    margin: auto;
+    width: 800px;
+    height: 200px;
+}
+.exo4{
+    position: absolute;
+    border: solid black 2px;
+}
+#exo4_1{
+    border: solid black 2px;
+    width: 800px;
+    height: 100px;
+    background-color:rgba(38, 146, 196, 0.5);
+}
+#exo4_2{
+    top: 200px;
+    left: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+#exo4_3{
+    top: 250px;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+#exo4_4{
+    top: 450px;
+    right: 250px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
