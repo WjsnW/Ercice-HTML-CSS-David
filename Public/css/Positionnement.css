@@ -1,33 +1,93 @@
+@font-face{
+    font-family: "attache";
+    src: url(../police/DancingScript-Medium.ttf) format("truetype");
+}
 /* ***** rajout ***** */
 body{
     margin: auto;
     width: 1000px;
+    background-color: #73a1aa;
 }
-h1,h2,p{
+h1,h2,h3,p{
     text-align: center;
 }
+h1{
+    font-family: "attache",serif;
+    font-size: 50px;
+}
+nav{
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background-color: grey;
+    z-index: 100;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    color: blanchedalmond;
+}
+a:hover{
+    color: #00e7ff;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.page{
+    display: flex;
+}
+.bt_expli{
+    margin: 20px;
+    width: 350px;
+    background-color: yellow;
+    box-shadow: 10px 10px 5px rgb(206, 206, 91);
+}
+dt{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+dt::before{
+    content: "* ";
+}
+dd::before{
+    content: "- ";
+}
+hr{
+    border-style: dashed;
+    border-color: blueviolet;
+}
+.monter{
+    position: relative;
+    top:-50px;
+}
 /* ***** exercice ***** */
-/* partie 1 (sans potion)*/
-#exo1{
+/* partie 1 (sans position)*/
+#bt_exo1{
     margin: auto;
-    width: 800px;
-    height: 200px;
+    width: 600px;
+    height: 220px;
 }
 .exo1{
     padding: 30px;
     border: black solid 2px;
 }
-.exo1_1{
-    background-color: green;
+#exo1_1{
+    border-radius: 30px;
+    background-color: rgb(56, 209, 18);
 }
-.exo1_2{
+#exo1_2{
     background-color: blue;
 }
-.exo1_3{
+#exo1_3{
+    border: rgb(255, 94, 0) inset 8px;
     background-color: orange;
 }
 /* partie 2 (relatif)*/
-#exo2{
+#bt_exo2{
     margin: auto;
     width: 400px;
     height: 210px;
@@ -51,108 +111,127 @@ h1,h2,p{
     top: 30px;
     right: 250px;
     height: 50px;
+    border: red 6px;
+    border-style: dashed solid;
     background-color: orange;
 }
-/* partie 3 (1 seulabsolute)*/
-#exo3{
-    position: relative;
+/* partie 3 (1 seul absolute)*/
+#bt_exo3{
     margin: auto;
-    width: 800px;
+    width: 600px;
     height: 350px;
 }
 .exo3{
+    position: relative;
     padding: 30px;
     border: solid black 2px;
 }
 #exo3_1{
-    width: 800px;
-    background-color: green;
+    width: 500px;
+    background: linear-gradient(to right,rgb(136, 70, 190), blue);
 }
 #exo3_2{
-    background-color: blue;
+    border: none;
+    background: linear-gradient(to right,blue,rgb(136, 70, 190));
 }
 #exo3_3{
     position: absolute;
     top: 170px;
-    right: 440px;
+    right: 300px;
+    border-radius: 100px;
     width: 100px;
     height: 100px;
-    background-color: orange;
+    background: linear-gradient(orange 70%, yellow);
 }
 /* partie 4 (uniquement des absolute) */
-#exo4{
+#bt_exo4{
     position: relative;
     margin: auto;
-    width: 800px;
-    height: 560px;
+    width: 600px;
+    height: 470px;
 }
 .exo4{
     position: absolute;
-    border: solid black 2px;
 }
 #exo4_1{
-    border: solid black 2px;
-    width: 800px;
+    right: 20px;
+    width: 500px;
     height: 100px;
     background-color:rgba(38, 146, 196, 0.5);
 }
 #exo4_2{
-    top: 200px;
-    left: 200px;
+    top: 120px;
+    left: 150px;
+    border-radius: 50px 0;
     width: 200px;
     height: 200px;
-    background-color: green;
+    background-color: rgb(27, 189, 27);
 }
 #exo4_3{
-    top: 250px;
-    left: 250px;
+    top: 170px;
+    left: 200px;
+    border-radius: 50px;
+    border-color: blue;
     width: 100px;
     height: 100px;
     background-color: blue;
 }
 #exo4_4{
-    top: 450px;
-    right: 250px;
+    top: 350px;
+    right: 100px;
     width: 100px;
     height: 100px;
     background-color: orange;
 }
 /* partie 5 (box-sizing + absolutte) */
-#exo5{
+#bt_exo5{
+    margin: auto;
+    width: 600px;
+    height: 500px;
+}
+#exo5_1{
     box-sizing: border-box;
     position: relative;
-    margin: auto;
-    width: 400px;
-    height: 400px;
+    left: 100px;
+    width: 420px;
+    height: 420px;
     border: black solid 2px;
-    background-color: blue;
-    padding: 20px;
+    background-color: rgba(38, 146, 196, 0.5);
 }
 .exo5{
     position: absolute;
+    border: solid black 2px;
     width: 170px;
     height: 170px;
-    border: black solid 2px;
-}
-#exo5_1{
-    background-color: green;
 }
 #exo5_2{
-    background-color: lightblue;
-    right: 20px;
+    top:20px;
+    left: 20px;
+    background-color:  rgb(27, 189, 27);
 }
 #exo5_3{
-    background-color: red;
-    bottom: 20px;
+    top: 20px;
+    right: 20px;
+    background-color: blue;
 }
 #exo5_4{
-    background-color: yellow;
+    left: 20px;
+    bottom: 20px;
+    background-color: red;
+}
+#exo5_5{
     right: 20px;
     bottom: 20px;
+    background-color: yellow;
 }
 /* partie 6 (z-index, respecter ordre couleur */
 /* vert -> bleu -> chocolat -> jaune */
-#exo6{
+#bt_exo6{
+    margin: auto;
+    width: 600px;
+    height:500px;
+}
+#exo6_1{
     margin: auto;
     border: solid black 2px;
     width: 400px;
@@ -164,83 +243,80 @@ h1,h2,p{
     height: 150px;
     border: solid black 2px;
 }
-#exo6_1{
+#exo6_2{
     position: relative;
-    background-color: rgb(28, 141, 28);
+    background-color: rgb(27, 189, 27);
     top: 35px;
     left: 35px;
 }
-#exo6_2{
+#exo6_3{
     position: relative;
     background-color: rgb(0 101 255 / 50%);
     bottom: 90px;
     left: 75px;
     z-index: 3;
 }
-#exo6_3{
+#exo6_4{
     position: relative;
     background-color: chocolate;
     bottom: 120px;
     left: 190px;
     z-index: 2;
 }
-#exo6_4{
+#exo6_5{
     position: relative;
     background-color: rgb(236, 233, 15);
     bottom: 240px;
     left: 230px;
 }
 /* partie 7 (float) */
-#exo7{
+#bt_exo7{
+    margin: auto;
+    width: 600px;
+    height:500px;
+}
+#exo7_1{
     margin: auto;
     border: solid black 2px;
-    width: 800px;
-    height: 450px;
+    width: 500px;
+    height: 400px;
     padding: 30px;
+    background-color: white;
 }
 .exo7{
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border: black solid 2px;
-}
-#exo7_1{
-    float: left;
-    background-color: green;
 }
 #exo7_2{
     float: left;
-    background-color: blue;
+    background-color: rgb(27, 189, 27);
 }
 #exo7_3{
     float: left;
-    width: 800px;
-    background-color: orange;
+    background-color: blue;
 }
 #exo7_4{
-    float: right;
-    background-color: yellow;
+    float: left;
+    width: 500px;
+    background-color: orange;
 }
 #exo7_5{
     float: right;
-    background-color: thistle;
+    background-color: yellow;
 }
-/* #exo7_3
-#exo7_4
-#exo7_5 */
+#exo7_6{
+    float: right;
+    background-color: grey;
+}
 /* partie 8 (sticky) */
-ul{
-    list-style: none;
-    padding: 0;
+#expli8{
+    align-items: flex-start;
 }
-#exo8_p{
-    text-align: initial;
-    word-break: keep-all;
-    overflow-wrap: break-word;
-}
-#exo8{
+#bt_exo8{
     margin: auto;
-    width: 800px;
+    width: 600px;
     height: 1200px;
 }
 #side{
@@ -251,6 +327,16 @@ ul{
     border: solid black 2px;
     border-radius: 20px;
     padding: 10px 30px;
-    top: 20px;
+    top: 40px;
     background-color: orange;
+}
+#side ul{
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+#exo8_p{
+    text-align: initial;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
