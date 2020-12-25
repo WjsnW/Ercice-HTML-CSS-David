@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face{
     font-family: "attache";
     src: url(../police/DancingScript-Medium.ttf) format("truetype");
@@ -16,6 +23,7 @@ h1{
     font-size: 50px;
 }
 nav{
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     padding: 10px;
@@ -31,19 +39,26 @@ a:hover{
     color: #00e7ff;
 }
 ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .page{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .bt_expli{
     margin: 20px;
     width: 350px;
     background-color: yellow;
+    -webkit-box-shadow: 10px 10px 5px rgb(206, 206, 91);
     box-shadow: 10px 10px 5px rgb(206, 206, 91);
 }
 dt{
@@ -128,10 +143,14 @@ hr{
 }
 #exo3_1{
     width: 500px;
+    background: -webkit-gradient(linear,left top, right top,from(rgb(136, 70, 190)), to(blue));
+    background: -o-linear-gradient(left,rgb(136, 70, 190), blue);
     background: linear-gradient(to right,rgb(136, 70, 190), blue);
 }
 #exo3_2{
     border: none;
+    background: -webkit-gradient(linear,left top, right top,from(blue),to(rgb(136, 70, 190)));
+    background: -o-linear-gradient(left,blue,rgb(136, 70, 190));
     background: linear-gradient(to right,blue,rgb(136, 70, 190));
 }
 #exo3_3{
@@ -141,6 +160,8 @@ hr{
     border-radius: 100px;
     width: 100px;
     height: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, orange), to(yellow));
+    background: -o-linear-gradient(orange 70%, yellow);
     background: linear-gradient(orange 70%, yellow);
 }
 /* partie 4 (uniquement des absolute) */
@@ -190,6 +211,7 @@ hr{
     height: 500px;
 }
 #exo5_1{
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     left: 100px;
@@ -284,6 +306,7 @@ hr{
     background-color: white;
 }
 .exo7{
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 130px;
     height: 130px;
@@ -312,6 +335,8 @@ hr{
 }
 /* partie 8 (sticky) */
 #expli8{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 }
 #bt_exo8{
