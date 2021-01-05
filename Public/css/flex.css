@@ -1,0 +1,100 @@
+@font-face{
+    font-family: "Roboto";
+    src: url("../police/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+body{
+    font-family: "Roboto",  sans-serif;
+}
+/* header */
+header{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, white), color-stop(50%, red), color-stop(80%, #9e0f16));
+    background: -o-linear-gradient(top, white 20%, red 50%, #9e0f16 80%);
+    background: linear-gradient(to bottom, white 20%, red 50%, #9e0f16 80%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+nav{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+nav a{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    border: 1px solid blue;
+    text-align: center;
+    margin-bottom: 10px;
+}
+nav a:hover{
+    color: orange;
+}
+/* site */
+#site{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+#side-1{
+    background-color: yellow;
+    padding: 20px;
+}
+#side-2{
+    background-color: pink;
+    padding: 20px;
+}
+h2{
+    text-decoration: underline;
+}
+main{
+    background-color: powderblue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+article{
+    background-image: url(../Image/vortex.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: yellow;
+    padding: 20px;
+}
+article:last-child, article:first-child{
+    background-image: url(../Image/expace.jpg);
+}
+/* footer */
+footer{
+    background-color: green;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+h4::after, h4::before{
+    content: "  "url(../Image/cardiogram-coeur.png)"  ";
+    width: 20px;
+    height: 20px;
+}
+h4:hover{
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
