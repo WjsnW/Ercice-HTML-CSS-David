@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+h1{
+    background: linear-gradient(to bottom, red 30%, white 50%, orange 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    font-size: 50px;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin: 10px;
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    color: #ea3911;
+}
