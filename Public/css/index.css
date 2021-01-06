@@ -2,6 +2,8 @@ body{
     text-align: center;
 }
 h1{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, red), color-stop(50%, white), color-stop(70%, orange));
+    background: -o-linear-gradient(top, red 30%, white 50%, orange 70%);
     background: linear-gradient(to bottom, red 30%, white 50%, orange 70%);
     background-clip: text;
     -webkit-background-clip: text;
