@@ -870,11 +870,7 @@ h1::after,h1::before{
 /* explication ici */
 .blanc{
     border: black solid 4px;
-    background-color: white;
-    background-image: url(../Image/tapisRose.JPG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #E6E6E6;
 }
 .bleu{
     border: black solid 4px;
