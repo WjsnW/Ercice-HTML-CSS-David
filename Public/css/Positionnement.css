@@ -230,7 +230,7 @@ hr{
     height: 100px;
     background-color: orange;
 }
-/* partie 5 (box-sizing + absolutte) */
+/* partie 5-1 (box-sizing + absolutte) */
 #bt_exo5{
     margin: auto;
     width: 600px;
@@ -270,6 +270,34 @@ hr{
 #exo5_5{
     right: 20px;
     bottom: 20px;
+    background-color: yellow;
+}
+/* partie 5-2 (box-sizing + relatif) */
+.exo5_2{
+    box-sizing: border-box;
+    position: relative;
+    border: solid black 2px;
+    width: 170px;
+    height: 170px;
+}
+#exo5_2_2{
+    top:20px;
+    left: 20px;
+    background-color: rgb(27, 189, 27);
+}
+#exo5_3_2{
+    top: -150px;
+    left: 230px;
+    background-color: blue;
+}
+#exo5_4_2{
+    left: 20px;
+    bottom: 120px;
+    background-color: red;
+}
+#exo5_5_2{
+    left: 230px;
+    bottom: 290px;
     background-color: yellow;
 }
 /* partie 6 (z-index, respecter ordre couleur */

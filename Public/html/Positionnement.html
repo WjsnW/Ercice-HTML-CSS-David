@@ -19,7 +19,7 @@
             <li><a title="Placer par rapport 'haut gauche' de la position du sujet" href="#relatif">Position relatif</a></li>
             <li><a title="Placer par rapport 'haut gauche' de la fenetre ou du parent relatif" href="#absolute_1">Position absolute 1</a></li>
             <li><a title="Placer par rapport 'haut gauche' de la fenetre ou du parent relatif" href="#absolute_2">Position absolute 2</a></li>
-            <li><a title="Une autre façons de compter l'espacement" href="#box">Boz-sizing et absolute</a></li>
+            <li><a title="Une autre façons de compter l'espacement" href="#box">Boz-sizing et absolute/relatif</a></li>
             <li><a title="Positionner par dessus" href="#z-index">Z-index</a></li>
             <li><a title="Mettre sur le cote" href="#float">Float</a></li>
             <li><a title="Suivre le scroll a partir d'un moment donner" href="#sticky">Sticky</a></li>
@@ -197,11 +197,11 @@
     <div class="monter" id="box"></div>
     <article>
         <div class="titre">
-            <h2>Exercice 5</h2>
+            <h2>Exercice 5-1</h2>
             <p>Utiliser "box-sizing" + "absolute" :</p>
         </div>
         <div class="page">
-            <!-- Exerice 5 -->
+            <!-- Exerice 5-1 -->
             <div id="bt_exo5">
                 <div id=exo5_1>
                     <div class="exo5" id=exo5_2></div>
@@ -210,7 +210,7 @@
                     <div class="exo5" id=exo5_5></div>
                 </div>
             </div>
-            <!-- Explication 5 -->
+            <!-- Explication 5-1 -->
             <div class="bt_expli">
                 <h3><u>Explications :</u></h3>
                 <dl>
@@ -242,6 +242,58 @@
                     <dt>Identifiant 5<sup>ieme</sup> div</dt>
                     <dd>right: 20px;</dd>
                     <dd>bottom: 20px;</dd>
+                    <dd>background-color: yellow;</dd>
+                </dl>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="titre">
+            <h2>Exercice 5-2</h2>
+            <p>Utiliser "box-sizing" + "relatif" :</p>
+        </div>
+        <div class="page">
+            <!-- Exerice 5-2 -->
+            <div id="bt_exo5">
+                <div id=exo5_1>
+                    <div class="exo5_2" id=exo5_2_2></div>
+                    <div class="exo5_2" id=exo5_3_2></div>
+                    <div class="exo5_2" id=exo5_4_2></div>
+                    <div class="exo5_2" id=exo5_5_2></div>
+                </div>
+            </div>
+            <!-- Explication 5-2 -->
+            <div class="bt_expli">
+                <h3><u>Explications :</u></h3>
+                <dl>
+                    <dt>Identifiant 1<sup>er</sup> div</dt>
+                    <dd>box-sizing: border-box;</dd>
+                    <dd>position: relative;</dd>
+                    <dd>left: 100px;</dd>
+                    <dd>width: 420px;</dd>
+                    <dd>height: 420px;</dd>
+                    <dd>border: black solid 2px;</dd>
+                    <dd>background-color: rgba(38, 146, 196, 0.5);</dd>
+                    <dt>Classe commune</dt>
+                    <dd>position: relative;</dd>
+                    <dd>border: solid black 2px;</dd>
+                    <dd>width: 170px;</dd>
+                    <dd>height: 170px;</dd>
+                    <dt>Identifiant 2<sup>ieme</sup> div</dt>
+                    <dd>top:20px;</dd>
+                    <dd>left: 20px;</dd>
+                    <dd>background-color:  rgb(27, 189, 27);</dd>
+                    <dt>Identifiant 3<sup>ieme</sup> div</dt>
+                    <dd>top: -150px;</dd>
+                    <dd>left: 230px;</dd>
+                    <dd>background-color: blue;</dd>
+                    <dt>Identifiant 4<sup>ieme</sup> div</dt>
+                    <dd>left: 20px;</dd>
+                    <dd>bottom: 120px;</dd>
+                    <dd>background-color: red;</dd>
+                    <dt>Identifiant 5<sup>ieme</sup> div</dt>
+                    <dd>right: 230px;</dd>
+                    <dd>bottom: 290px;</dd>
                     <dd>background-color: yellow;</dd>
                 </dl>
             </div>
