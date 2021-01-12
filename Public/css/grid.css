@@ -23,7 +23,8 @@ h1::after,h1::before{
     border: solid 4px black;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(5,1fr) 10% repeat(2,1fr) 1% repeat(3,1fr) 7% repeat(3,1fr);
+    /* 16 x 13 */
+    grid-template-columns: repeat(5,1fr) 10% repeat(2,1fr) 3% 5% repeat(2,1fr) 8% repeat(3,1fr);
     grid-template-rows: repeat(5,1fr) 18% repeat(3,1fr) 14% repeat(2,1fr) 1%;
 }
 .blanc{
@@ -146,10 +147,10 @@ h1::after,h1::before{
     grid-area: 12/1/14/5;
 }
 #case32{
-    grid-area: 11/6/14/9;
+    grid-area: 11/6/14/8;
 }
 #case33{
-    grid-area: 11/9/14/13;
+    grid-area: 11/8/14/13;
 }
 #case34{
     grid-area: 11/13/14/17;
