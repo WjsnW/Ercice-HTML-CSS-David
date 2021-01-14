@@ -89,37 +89,178 @@ article{
 /* Exo 2 */
 #exo2{
     box-sizing: border-box;
-    margin: 0 auto;
+    position: relative;
     width: 600px;
     height: 400px;
+    color: white;
+    font-size: 50px;
     background-color: black;
 }
-#exo2 div{
+/* gere les barre */
+.bar{
     position: absolute;
-    background-color: white;
-}
-#exo2 div:nth-child(1){
+    top: 150px;
     width: 10px;
     height: 100px;
-    transform: translateX(30px) translateY(150px);
+    background-color: white;
+    animation-name: joueur;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
 }
-#exo2 div:nth-child(2) {
+.bar:nth-child(1){
+    left: 20px;
+}
+.bar:nth-child(2){
+    right: 20px;
+}
+@keyframes joueur{
+0%{
+    transform: translateY(0px);
+    background-color: white;
+}
+30%{
+    transform: translateY(0px);
+    background-color: white;
+}
+35%{
+    transform: translateY(100px);
+    background-color: white;
+}
+45%{
+    transform: translateY(-20px);
+    background-color: white;
+}
+55%{
+    transform: translateY(50px);
+    background-color: white;
+}
+79%{
+    transform: translateY(150px);
+    background-color: white;
+}
+80%{
+    transform: translateY(150px);
+    background-color: rgba(0,0,0,0);
+}
+81%{
+    transform: translateY(150px);
+    background-color: white;
+}
+82%{
+    transform: translateY(150px);
+    background-color: rgba(0,0,0,0);
+}
+83%{
+    transform: translateY(150px);
+    background-color: white;
+}
+85%{
+   transform: translateY(150px);
+   background-color: white;
+}
+100%{
+    transform: translateY(150px);
+    background-color: white;
+}
+}
+/* gere le texte */
+.tex{
+    position: absolute;
+    animation-name: texte;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: rgba(0,0,0,0);
+}
+#balle div:nth-child(2){
+    animation-delay: 1s;
+}
+#balle div:nth-child(3){
+    animation-delay: 2s;
+}
+#balle div:nth-child(5){
+    left: -100px;
+    animation-delay: 11.5s;
+}
+@keyframes texte{
+    0%{
+        color: white;
+        transform: scale(1);
+    }
+    10%{
+        color: rgba(0,0,0,0);
+        transform: scale(0.5);
+    }
+    100%{
+        color: rgba(0,0,0,0);
+        transform: scale(1);
+    }
+}
+/* gere la balle */
+#exo2{
+    margin: 0 auto;
+}
+#exo2 #balle{
+    position: relative;
+    top: 160px;
+    left: 300px;
+}
+#boule{
+    position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transform: translateX(300px) translateY(180px);
+    background-color: rgba(0,0,0,0);
+    transform: translateX(0) translateY(0);
+    animation-name: pong;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.14, 0.01, 0.84, 0.98);
+    animation-delay: 1s;
 }
-#exo2 div:nth-child(3) {
-    width: 10px;
-    height: 100px;
-    transform: translateX(560px) translateY(150px);
-}
-#exo2 div:nth-child(4) {
-    display: flex;
-    font-size: 20px;
-    background-color: black;
-    color: red;
-    transform: translateX(150px);
+@keyframes pong{
+    0%{
+        transform: translateX(0px) translateY(0px);
+        background-color: rgba(0,0,0,0);
+    }
+    10%{
+        transform: translateX(0px) translateY(0px);
+        background-color: rgba(0,0,0,0);
+    }
+    11%{
+        transform: translateX(0px) translateY(0px);
+        background-color: rgba(0,0,0,0);
+    }
+    20%{
+        transform: translateX(0px) translateY(0px);
+        background-color: white;
+    }
+    30%{
+        transform: translateX(-10px) translateY(220px);
+        background-color: white;
+    }
+    40%{
+        transform: translateX(-50px) translateY(100px);
+        background-color: white;
+    }
+    50%{
+        transform: translateX(-80px) translateY(220px);
+        background-color: white;        
+    }
+    60%{
+        transform: translateX(-110px) translateY(190px);
+        background-color: white;
+    }
+    70%{
+        transform: translateX(-130px) translateY(220px);
+        background-color: white;
+    }
+    100%{
+        transform: translateX(-130px) translateY(220px);
+        background-color: rgba(0,0,0,0);
+    }
 }
 /* Exo 3 */
 #exo3{
@@ -268,12 +409,17 @@ article{
 }
 /* exo 5 */
 #exo5{
-    box-sizing: border-box;
     position: relative;
     width: 600px;
     height: 600px;
     margin: 20px auto;
     border: 4px solid black;
+}
+#car{
+    position:absolute;
+}
+img{
+    transform: rotateZ(90deg);
 }
 /* exo 6 */
 #exo6{
