@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 20px 20px;
+    font-size: 30px;
+}
+nav a:hover{
+    color: yellow;
+    transition: transform 0.5s;
+    transform: scale(1.1);
+}
+/* site */
+main{
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+}
+article{
+    margin: 50px;
+}
+/* exo 1 */
+#exo1 div{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    background-color: yellow;
+    font-size: 70px;
+    transform: rotateZ(90deg);
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
+    animation-name: carreRot;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes carreRot{
+    o%{
+        transform: rotateZ(0);
+        color: rgba(0, 0, 0, 0);
+        border-radius:0%;
+    }
+    80%{
+        transform: rotate(450deg);
+        color: rgba(0, 0, 0, 0);
+        border-radius:0%;
+    }
+    90%{
+        border-radius: 50%;
+        color: black;
+        transform: rotate(450deg);
+    }
+    100%{
+        border-radius: 50%;
+        color: black;
+        transform: rotate(450deg);
+    }
+}
+/* Exo 2 */
+#exo2{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 600px;
+    height: 400px;
+    background-color: black;
+}
+#exo2 div{
+    position: absolute;
+    background-color: white;
+}
+#exo2 div:nth-child(1){
+    width: 10px;
+    height: 100px;
+    transform: translateX(30px) translateY(150px);
+}
+#exo2 div:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translateX(300px) translateY(180px);
+}
+#exo2 div:nth-child(3) {
+    width: 10px;
+    height: 100px;
+    transform: translateX(560px) translateY(150px);
+}
+#exo2 div:nth-child(4) {
+    display: flex;
+    font-size: 20px;
+    background-color: black;
+    color: red;
+    transform: translateX(150px);
+}
