@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+main{
+    margin: 0 auto;
+    text-align: center;
+}
+/* header */
+@media screen and (max-width: 800px){
+    header{
+        display: none;
+    }
+}
+/* para */
+#para1{
+    display: flex;
+}
+p{
+    padding: 10px;
+}
+@media screen and (max-width: 640px){
+    #para1{
+        display: block;
+    }
+}
+/* impression */
+footer{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+@media print {
+    footer{
+        display: block;
+    }
+}
