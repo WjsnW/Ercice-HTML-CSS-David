@@ -20,7 +20,9 @@ nav a:hover{
     transition: transform 0.5s;
     transform: scale(1.1);
 }
-/* site */
+
+
+/* ***** site ***** */
 main{
     display: flex;
     flex-direction: column;
@@ -38,7 +40,12 @@ article{
     background-color: #54c127;
 
 }
-/* exo 1 */
+.monte{
+    position: relative;
+    top: -100px;
+}
+
+/* **** exo 1 ***** */
 #exo1 div{
     margin: 0 auto;
     width: 100px;
@@ -86,7 +93,9 @@ article{
         border-radius:0%;
     }
 }
-/* Exo 2 */
+
+
+/* ***** Exo 2 ****** */
 #exo2{
     box-sizing: border-box;
     position: relative;
@@ -262,7 +271,9 @@ article{
         background-color: rgba(0,0,0,0);
     }
 }
-/* Exo 3 */
+
+
+/* ***** Exo 3 ***** */
 #exo3{
     display: flex;
     justify-content: center;
@@ -303,7 +314,9 @@ article{
         transform: scale(1);
     }
 }
-/* exo 3_2 */
+
+
+/* ***** exo 3_2 ***** */
 #exo3_2{
     margin: 20px auto;
     width: 50px;
@@ -324,7 +337,9 @@ article{
         transform: rotateZ(360deg);
     }
 }
-/* exo 4 */
+
+
+/* ***** exo 4 ***** */
 #exo4{
     box-sizing: border-box;
     position: relative;
@@ -407,21 +422,110 @@ article{
         background-color:  rgb(53, 210, 238);
     }
 }
-/* exo 5 */
-#exo5{
-    position: relative;
-    width: 600px;
-    height: 600px;
-    margin: 20px auto;
-    border: 4px solid black;
+
+
+/* ***** exo 5 ***** */
+#exo5 {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 600px;
+  width: 600px;
+  border: 4px solid black;
+  perspective: 1000px;
 }
-#car{
-    position:absolute;
+/* deplacer au tour du carre*/
+#axeCentre{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation-name: deplCarre;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
 }
-img{
-    transform: rotateZ(90deg);
+@keyframes deplCarre{
+  0%{
+    transform: translateX(-186px) translateY(-200px);
+  }
+  25%{
+    transform: translateX(36px) translateY(-200px)
+  }
+  50%{
+    transform: translateX(36px) translateY(50px)
+  }
+  75%{
+    transform: translateX(-186px) translateY(50px)
+  }
+  100%{
+    transform: translateX(-186px) translateY(-200px)
+  }
 }
-/* exo 6 */
+/* rotation central */
+#btAxeIm{
+  width: 100px;
+  height: 100px;
+  animation-name: rotCentre;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotCentre{
+    from {
+        transform: rotateZ(0deg);
+    } to {
+        transform: rotateZ(360deg);
+    }
+}
+/* rotation image */
+#axeIm {
+  animation-name: rotIm;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-style: preserve-3d;
+}
+/* rajout */
+#axeIm:hover {
+    animation-play-state: paused;
+}
+@keyframes rotIm {
+  from {
+    transform: rotateY(0deg);
+  } to {
+    transform: rotateY(360deg);
+  }
+}
+/* Position image */
+.btIm {
+  position: absolute;
+}
+/* 
+360/6 = 60°
+*/
+.btIm:nth-child(1) {
+  transform: rotateY(0deg) translateZ(160px);
+}
+.btIm:nth-child(2) {
+  transform: rotateY(60deg) translateZ(160px);
+}
+.btIm:nth-child(3) {
+  transform: rotateY(120deg) translateZ(160px);
+}
+.btIm:nth-child(4) {
+  transform: rotateY(180deg) translateZ(160px);
+}
+.btIm:nth-child(5) {
+  transform: rotateY(240deg) translateZ(160px);
+}
+.btIm:nth-child(6) {
+  transform: rotateY(300deg) translateZ(160px);
+}
+
+
+/* ***** exo 6 ***** */
 #exo6{
     position: relative;
     display: flex;
