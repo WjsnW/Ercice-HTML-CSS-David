@@ -15,12 +15,11 @@ html, body {
   perspective: 1000px;
 }
 /* deplacer le tour du carre*/
-#axeCentre{
+#contour{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  border: 2px solid black;
   animation-name: deplCarre;
   animation-duration: 10s;
   animation-timing-function: linear;
@@ -29,42 +28,25 @@ html, body {
 }
 @keyframes deplCarre{
   0%{
-    transform: translateX(-186px) translateY(-200px);
+    transform: translateX(-190px) translateY(-140px);
   }
   25%{
-    transform: translateX(36px) translateY(-200px)
+    transform: translateX(25px) translateY(-140px)
   }
   50%{
-    transform: translateX(36px) translateY(50px)
+    transform: translateX(25px) translateY(50px)
   }
   75%{
-    transform: translateX(-186px) translateY(50px)
+    transform: translateX(-190px) translateY(50px)
   }
   100%{
-    transform: translateX(-186px) translateY(-200px)
+    transform: translateX(-190px) translateY(-140px)
   }
-}
-/* rotation central */
-#btAxeIm{
-  width: 100px;
-  height: 100px;
-  border: 2px solid red;
-  animation-name: rotCentre;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-@keyframes rotCentre{
-    from {
-        transform: rotateZ(0deg);
-    } to {
-        transform: rotateZ(360deg);
-    }
 }
 /* rotation image */
 #axeIm {
   animation-name: rotIm;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   transform-style: preserve-3d;
@@ -75,9 +57,9 @@ html, body {
 }
 @keyframes rotIm {
   from {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg);
   } to {
-    transform: rotateY(360deg);
+    transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
   }
 }
 /* Position image */
