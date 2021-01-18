@@ -19,10 +19,10 @@
 
 /* ex2 */
 .row{
-    grid-column: 100%;
+    width: 100%;
 }
 .col-xs-1{
-    grid-area: calc(100% / 12);
+    width: calc(100% / 12);
 }
 .col-xs-2{
     width: calc(200% / 12);
@@ -61,7 +61,7 @@
 /* exo 3 */
 @media screen and (min-width : 700px){
     .col-sm-1{
-    width: calc(100% / 12);
+        width: calc(100% / 12);
     }
     .col-sm-2{
         width: calc(200% / 12);
@@ -76,7 +76,7 @@
         width: calc(500% / 12);
     }
     .col-sm-6{
-        width: calc(600% / 12);
+        width: 50%;
     }
     .col-sm-7{
         width: calc(700% / 12);
@@ -99,7 +99,7 @@
 }
 @media screen and (min-width : 900px){
     .col-md-1{
-    width: calc(100% / 12);
+        width: calc(100% / 12);
     }
     .col-md-2{
         width: calc(200% / 12);
@@ -114,7 +114,7 @@
         width: calc(500% / 12);
     }
     .col-md-6{
-        width: calc(600% / 12);
+        width: 40%;
     }
     .col-md-7{
         width: calc(700% / 12);
@@ -137,7 +137,7 @@
 }
 @media screen and (min-width : 1200px){
     .col-lg-1{
-    width: calc(100% / 12);
+        width: calc(100% / 12);
     }
     .col-lg-2{
         width: calc(200% / 12);
@@ -152,7 +152,7 @@
         width: calc(500% / 12);
     }
     .col-lg-6{
-        width: calc(600% / 12);
+        width: 50%;
     }
     .col-lg-7{
         width: calc(700% / 12);
@@ -181,12 +181,17 @@ body{
 /* en tete */
 #entete1{
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
     justify-content: space-between;
     text-align: center;
+    background-color: white;
 }
 #burger{
     position: relative;
-    right: 10px;
+    right: 30px;
     width: 45px;
     height: 45px;
     cursor: pointer;
@@ -229,13 +234,14 @@ nav a{
     color: brown;
     margin: 5px 0;
 }
-#burger:hover nav{
+#burger:hover #nav1{
     display: flex;
 }
 nav a:hover{
     background-color: rgb(100, 98, 98);
 }
 #entete2{
+    margin-top: 70px;
     text-align: center;
 }
 #nav2{
@@ -268,6 +274,9 @@ footer{
 @media screen and (min-width: 900px){
     #entete1{
         display: none;
+    }
+    #entete2{
+        margin-top: 0;
     }
     #nav2{
         display: flex;

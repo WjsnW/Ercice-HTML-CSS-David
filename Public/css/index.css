@@ -26,6 +26,9 @@ a{
 a:hover{
     color: #ea3911;
 }
+.desactiver{
+    pointer-events: none;
+}
 .desactiver:hover{
     color: blue;
 }
