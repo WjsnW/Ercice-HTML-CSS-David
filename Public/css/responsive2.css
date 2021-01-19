@@ -54,28 +54,25 @@ h1{
     margin: 2px;
 }
 
-
 /* image 2 */
 @media screen and (min-width: 600px){
-    #maintenant{
-        margin: 0 auto;
-        width: 600px;
-        grid-template-columns: 1fr 1fr;
-    }
-    #semain{
-        margin: 0 auto;
-        width: 600px;
-    }
-}
-/* image 3 */
-@media screen and (max-height: 400px){
     h1{
         margin: 0;
     }
     p{
         margin: 0;
     }
+    #maintenant{
+        margin: 0 auto;
+        width: 1000px;
+        grid-template-columns: 300px 1fr;
+    }
+}
+/* image 3 */
+@media screen and (min-width: 1000px){   
     #semain{
+        margin: 0 auto;
+        width: 1000px;
         margin-top: 10px;
         grid-auto-flow: column;
         grid-template-rows: 20px 1fr 20px 20px;

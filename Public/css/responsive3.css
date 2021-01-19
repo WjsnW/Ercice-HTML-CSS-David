@@ -1,14 +1,10 @@
 /* ex1 */
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100vw;
+    box-sizing: border-box;
+    width: 100%;
 }
 .container-fluid{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
 }
 @media screen and (max-width : 1200px){
     .container-fluid{
@@ -20,6 +16,14 @@
 /* ex2 */
 .row{
     width: 100%;
+}
+.row>div{
+    box-sizing: border-box;
+    float: left;
+}
+.row::after{
+    clear: both;
+    content: "";
 }
 .col-xs-1{
     width: calc(100% / 12);
@@ -59,6 +63,14 @@
 }
 
 /* exo 3 */
+.container>div{
+    box-sizing: border-box;
+    float: left;
+}
+.container::after{
+    clear: both;
+    content: "";
+}
 @media screen and (min-width : 700px){
     .col-sm-1{
         width: calc(100% / 12);
@@ -76,7 +88,7 @@
         width: calc(500% / 12);
     }
     .col-sm-6{
-        width: 50%;
+        width: calc(600% / 12);
     }
     .col-sm-7{
         width: calc(700% / 12);
@@ -114,7 +126,7 @@
         width: calc(500% / 12);
     }
     .col-md-6{
-        width: 40%;
+        width: calc(600% / 12);
     }
     .col-md-7{
         width: calc(700% / 12);
@@ -152,7 +164,7 @@
         width: calc(500% / 12);
     }
     .col-lg-6{
-        width: 50%;
+        width: calc(600% / 12);
     }
     .col-lg-7{
         width: calc(700% / 12);
@@ -228,11 +240,11 @@ span::before{
     left: -100vw;
     width: 110vw;
     background-color: grey;
+    font-size: 30px;
 }
 nav a{
     text-decoration: none;
     color: brown;
-    margin: 5px 0;
 }
 #burger:hover #nav1{
     display: flex;
@@ -258,8 +270,14 @@ p{
 }
 /* article */
 .art{
-    margin: 10px;
-    background-color: grey;
+    height: 510px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.art div{
+    overflow: auto;
+    height: 100%;
+    border: black 1px solid;
     border-radius: 20px;
 }
 .art img{
@@ -288,5 +306,15 @@ footer{
         border: 1px solid black;
         border-radius: 20px;
         text-align: center;
+    }
+    .annuler{
+        transform: translateX(50%);
+        width: 500px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .annuler{
+        transform: none;
+        width: calc(400%  / 12);
     }
 }
