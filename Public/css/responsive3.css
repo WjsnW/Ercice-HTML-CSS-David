@@ -1,3 +1,9 @@
+/* 
+Beug trouver mais pas reproduit
+- quand je change la taille de la fenetre
+    j'ais un espace sur les côtée qui se crée
+*/
+
 /* ex1 */
 .container{
     box-sizing: border-box;
